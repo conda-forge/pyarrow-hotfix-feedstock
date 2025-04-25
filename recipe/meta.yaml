@@ -1,5 +1,5 @@
 {% set name = "pyarrow-hotfix" %}
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyarrow_hotfix-{{ version }}.tar.gz
-  sha256: 79d3e030f7ff890d408a100ac16d6f00b14d44a502d7897cd9fc3e3a534e9945
+  sha256: 59399cd58bdd978b2e42816a4183a55c6472d4e33d183351b6069f11ed42661d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
